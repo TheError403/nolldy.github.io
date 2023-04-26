@@ -79,42 +79,136 @@ header, footer {
 
 /* Imported Typfaces */
 
+@font-face {
+    font-family:montserrat;
+    src: url(../fonts/montserrat-regular.ttf);
+    font-weight:normal;
+    font-style:normal;
+}
 
-
-
+@font-face {
+    font-family:josefinslab;
+    src: url(../fonts/josefinslab-regular.ttf);
+    font-weight:normal;
+    font-style:normal;
+}
 
 /* Typography Styles */
 
+html {
+    font-family:montserrat, sans-serif;
+}
 
+h1 {
+    font-family:josefinslab, serif;
+    letter-spacing: .125rem;
+    font-size: 3.75rem;
+    margin: 1.125rem;
+    text-align:center;
+}
 
+h2 {
+    font-family:josefinslab, serif;
+    letter-spacing: .125rem;
+    font-size: 1.5rem;
+}
 
+h2 + p {
+    text-indent: 1.5rem;
+}
 
+p {
+    font-size: .75rem;
+    letter-spacing: .03125rem;
+    word-spacing: .125rem;
+}
+
+li {
+    font-size: .75rem;
+    letter-spacing: .03125rem;
+    word-spacing: .125rem;
+}
+
+figcaption {
+    font-size: .75rem;
+    margin-bottom: 2rem;
+}
 
 /* Link Styling */
+/*LoVe Fears HAte*/
 
+a {
+    outline:none;
+}
 
+a:link {
+    color:#33658A
+}
 
+a:visited {
+    color:#33658A
+}
 
+a:focus {
+    text-decoration:none;
+}
 
+a:hover {
+    text-decoration:none;
+}
 
 /* List Styling */
 
+ul {
+    margin: 1rem 0 1rem 0;
+    list-style:square;
+}
 
+ol {
+    margin: 1rem 0 1rem 0;
+    list-style:lower-alpha;
+}
 
-
-
+.long-list a:hover {
+    text-transform:uppercase;
+}
 
 /* Navigation Menu */
 
+nav {
+    padding-left: 0;
+    margin-top: .25rem;
+}
 
+nav a {
+    text-decoration:none;
+    display:inline-block;
+    width: 100%;
+    line-height: 3;
+    text-align:center;
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+    border: solid #33658A .0625rem;
+}
 
+nav a:focus {
+    color:#FFF;
+    background-color:#33658A;
+}
 
+nav a:hover {
+    color:#FFF;
+    background-color:#33658A;
+}
 
+nav a:active {
+    color:#FFF;
+    background-color:#000;
+}
 
 /* Footer Styles */
 
-
-
-
-
+footer {
+    text-align: center;
+}
 
