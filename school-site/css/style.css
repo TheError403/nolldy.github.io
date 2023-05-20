@@ -96,11 +96,11 @@ header, footer {
 /* Typography Styles */
 
 html {
-    font-family:montserrat, sans-serif;
+    font-family:'montserrat', sans-serif;
 }
 
 h1 {
-    font-family:josefinslab, serif;
+    font-family:'josefinslab', serif;
     letter-spacing: .125rem;
     font-size: 3.75rem;
     margin: 1.125rem;
@@ -108,7 +108,7 @@ h1 {
 }
 
 h2 {
-    font-family:josefinslab, serif;
+    font-family:'josefinslab', serif;
     letter-spacing: .125rem;
     font-size: 1.5rem;
 }

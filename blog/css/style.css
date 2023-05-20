@@ -1,6 +1,6 @@
 /* TO GET AN IDEA OF THE CSS YOU WILL LIKELY BE USING, SEE THE LISTS BELOW. */
 
-        /* 
+    /* 
         
         Spacing 
 
@@ -11,6 +11,7 @@
             - letter-spacing, word-spacing, line-height
 
             - width, max-width, min-width
+
             - height, max-height, min-height
 
         Typography 
@@ -43,9 +44,99 @@
 
             - @font-face or @import (to import typefaces)
 
-        */
-
+    */
 
 /* ------ START WRITING YOUR CODE BELOW ------ */
 
+/* Typefaces */
+@font-face {
+    font-family:Lato;
+    src: url(/blog/fonts/sans-serif/lato-regular.ttf);
+    font-weight:normal;
+    font-style:normal;
+}
 
+@font-face {
+    font-family:Montserrat;
+    src: url(/blog/fonts/sans-serif/montserrat-regular.ttf);
+    font-weight:normal;
+    font-style:normal;
+}
+
+@font-face {
+    font-family:Opensans;
+    src: url(/blog/fonts/sans-serif/opensans-regular.ttf);
+    font-weight:normal;
+    font-style:normal;
+}
+
+@font-face {
+    font-family:Roboto;
+    src: url(/blog/fonts/sans-serif/roboto-regular.ttf);
+    font-weight:normal;
+    font-style:normal;
+}
+
+@font-face {
+    font-family:Josefinslab;
+    src: url(/blog/fonts/serif/josefinslab-regular.ttf);
+    font-weight:normal;
+    font-style:normal;
+}
+
+@font-face {
+    font-family:Robotoslab;
+    src: url(/blog/fonts/serif/robotoslab-regular.ttf);
+    font-weight:normal;
+    font-style:normal;
+}
+
+@font-face {
+    font-family:Rohaone;
+    src: url(/blog/fonts/serif/rozhaone-regular.ttf);
+    font-weight:normal;
+    font-style:normal;
+}
+
+@font-face {
+    font-family:Ultra;
+    src: url(/blog/fonts/serif/ultra-regular.ttf);   
+    font-weight:normal;
+    font-style:normal;
+}
+
+/* Typography */
+
+html {
+    font-family:lato;
+    font-size: 16px;
+    background-color: #fff;
+}
+
+body {
+
+}
+
+nav {
+    border-top: #333 2px solid;
+    border-bottom: #333 2px solid;
+    padding: 32px 0 32px 0;
+}
+
+h1 {
+    font-family: 'lato', serif;
+    font-size: 6rem;
+}
+
+h1 > span {
+    font-family: 'Ultra', 'lato', serif;
+    font-size:20rem;
+}
+
+h2 {
+    
+}
+
+h3 {
+
+}
