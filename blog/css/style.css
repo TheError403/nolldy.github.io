@@ -49,6 +49,7 @@
 /* ------ START WRITING YOUR CODE BELOW ------ */
 
 /* Typefaces */
+
 @font-face {
     font-family:Lato;
     src: url(/blog/fonts/sans-serif/lato-regular.ttf);
@@ -111,11 +112,14 @@ html {
     font-family:'lato', 'roboto', 'opensans';
     font-size: 16px;
     background-color: white;
-    
 }
 
 body {
     line-height: 22.5px;
+}
+
+a:link {
+    text-decoration:none;
 }
 
 nav {
@@ -126,38 +130,33 @@ nav {
     border-bottom: #333 2px solid;
     padding: 40px 32px 56px 48px;
     word-spacing: 128px;
+
+    & a {
+        outline:none;
+        color:#4d4d4d;
+    }
+
+    & a:hover {
+        text-transform:uppercase;
+        text-decoration: line-through;
+    }
+
+    & a:active {
+        text-transform: uppercase;
+        text-decoration: line-through;
+    }
+
+    & :nth-child(2) {
+        text-transform:uppercase;
+        text-decoration:line-through;
+        writing-mode: vertical-lr;
+        transform: rotate(-78.5deg);
+        color: black;
+        position: relative;
+        top: 28px;
+        margin-top: -48px;
+    }    
 }
-
-nav a {
-    outline:none;
-    color:#4d4d4d;
-}
-
-a:link {
-    text-decoration:none;
-}
-
-nav a:hover {
-    text-transform:uppercase;
-    text-decoration: line-through;
-}
-
-nav a:active {
-    text-transform: uppercase;
-    text-decoration: line-through;
-
-}
-
-nav :nth-child(2) {
-    text-transform:uppercase;
-    text-decoration:line-through;
-    writing-mode: vertical-lr;
-    transform: rotate(-78.5deg);
-    color: black;
-    position: relative;
-    top: 28px;
-    margin-top: -48px;
-}    
 
 h1 {
     font-family: 'lato', serif;
@@ -165,6 +164,10 @@ h1 {
     text-align:center;
     transform: rotate(-.0075turn);
     line-height: 150px;
+
+    & span {
+        font-family: 'Ultra', 'lato', serif;
+    }
 
     .highlight {
         width: 100px;
@@ -176,21 +179,17 @@ h1 {
     }
 }
 
-h1 span {
-    font-family: 'Ultra', 'lato', serif;
-}
-
 h2 {
     margin: 64px 0 16px 0;
 }
 
 main {
-    padding-left: 48px;
-}
+    padding-left: 48px;  
 
-main section {
-    /*Fixed my problems when I remember this element*/
-    display: flex;
+    & section {
+        /*Fixed my problems when I remembered this element*/
+        display: flex;
+    }
 }
 
 article {
@@ -199,61 +198,61 @@ article {
     padding-right: 48px;
     padding-bottom: 32px;
     border-right: black 2px solid;
-}
 
-article img {
-    float:left;
-    padding-right: 24px;
-    margin-left: -40px;
-    height: auto;
-}
+    .subsection {
+        padding: none;
+        width: 100%;
+        justify-content: center;
 
-.subsection {
-    padding: none;
-    width: 100%;
-    justify-content: center;
-}
+        & figure {
+            display: table;
+            margin-left: -32px;
+            background-color: #2f99f0e5;
+        }
 
-.subsection figure {
-    display: table;
-    margin-left: -32px;
-    background-color: #2f99f0e5;
-}
+        & img {
+            float: none;
+            margin-left: 0;
+            padding-right: 0;
+            height: 40vh;
+            width: 37.75vh;
+        }
 
-.subsection img {
-    float: none;
-    margin-left: 0;
-    padding-right: 0;
-    height: 40vh;
-    width: 37.75vh;
-}
+        & figcaption {
+            display: table-caption;
+            caption-side: bottom;
+            background-color:#2f99f0e5;
+            padding-bottom: 8px;
+            text-align: center;
+        }
+    }
+    
+    & img {
+        float:left;
+        padding-right: 24px;
+        margin-left: -40px;
+        height: auto;
+    }
 
-.subsection figcaption {
-    display: table-caption;
-    caption-side: bottom;
-    background-color:#2f99f0e5;
-    padding-bottom: 8px;
-    text-align: center;
-}
+    & a {
+        font-family: 'ultra', 'rozhaone', 'robotlab';
+        font-size: 26px;
+        justify-content: center;
+        color: beige;
+        width: 175px;
+        height: 35px;
+        background-color: rgb(33, 120, 219);
+        box-shadow: black 5px 5px 5px;
+        padding: 24px 24px 8px 24px;
+        border-radius: 20px 20px 20px 20px;
+        text-transform: uppercase;
+        display: flex;
+        margin-top: 32px;
+    }
 
-article a {
-    font-family: 'ultra', 'rozhaone', 'robotlab';
-    font-size: 26px;
-    justify-content: center;
-    color: beige;
-    width: 175px;
-    height: 35px;
-    background-color: rgb(33, 120, 219);
-    box-shadow: black 5px 5px 5px;
-    padding: 24px 24px 8px 24px;
-    border-radius: 20px 20px 20px 20px;
-    text-transform: uppercase;
-    display: flex;
-    margin-top: 32px;
-}
-
-article time {
-    font-size: 14px;
+    & time {
+        font-size: 14px;
+    }
 }
 
 aside {
@@ -263,23 +262,21 @@ aside {
     display: grid;
     width: 19.125%;
 
-    
-}
+    & p {
+        border-bottom: black 2px solid;
+        padding-bottom: 16px;
 
-aside p {
-    border-bottom: black 2px solid;
-    padding-bottom: 16px;
-}
+        .expand {
+            width: 32px;
+            height: auto;
+            font-size: 6px;
+        }
+    }
 
-.expand {
-    width: 32px;
-    height: auto;
-    font-size: 6px;
-}
-
-aside img {
-    max-height: 300px;
-    width: 400px;
+    & img {
+        max-height: 300px;
+        width: 400px;
+    }
 }
 
 footer {
@@ -299,8 +296,8 @@ footer {
         width: 89.75%;
         text-align: right;
     }
-}
 
-footer a {
-    color:#0060ce;
+    & a {
+        color:#0060ce;
+    }
 }
